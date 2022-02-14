@@ -1,19 +1,18 @@
 {
   "name": "jate",
   "version": "1.0.0",
-  "description": "## Your Task",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT) ## Description Created a web app with self built webpack and service worker and made app installable",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
-    "start": "cd server && node server.js",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd client && npm install && cd ../server && npm install",
-    "client": "cd client && npm start",
-    "build:prod": "webpack --mode production"
+    "client": "cd client && npm start"
   },
   "keywords": [],
-  "author": "brianna pappas",
+  "author": "Brianna Pappas",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
